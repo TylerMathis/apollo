@@ -15,7 +15,7 @@ def parse():
 
 def _validate(args):
     try:
-        inp, userOut, judgeOut = args.input, args.user_output, args.judge_output
+        inp, user_out, judge_out = args.input, args.user_output, args.judge_output
     except ValueError:
         print('Internal error parsing input')
         return False
@@ -23,9 +23,9 @@ def _validate(args):
     missingFiles = []
     if not exists(inp):
         missingFiles.append('input')
-    if not exists(userOut):
+    if not exists(user_out):
         missingFiles.append('user_output')
-    if not exists(judgeOut):
+    if not exists(judge_out):
         missingFiles.append('judge_output')
 
     if missingFiles:
