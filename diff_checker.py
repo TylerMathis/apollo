@@ -10,12 +10,12 @@ def check(user_out, judge_out):
     while (judge_lines[-1] == ''):
         judge_lines.pop()
 
-    lines_user = len(user_lines)
-    lines_judge = len(judge_lines)
-    min_lines = min(lines_user, lines_judge)
+    user_line_count = len(user_lines)
+    judge_line_count = len(judge_lines)
+    min_lines = min(user_line_count, judge_line_count)
 
     # Give wrong answer for missing output
-    if (lines_user < lines_judge):
+    if (user_line_count < judge_line_count):
         return Response(WrongAnswer, 'Not enough output')
 
     # Check input line by line
@@ -28,7 +28,7 @@ def check(user_out, judge_out):
             ))
 
     # Give presentation error for too much output
-    if (lines_user > lines_judge):
+    if (user_line_count > judge_line_count):
         return Response(PresentationError, 'Too much output')
 
     return Response(Correct)
