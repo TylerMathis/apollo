@@ -13,5 +13,5 @@ with open(args.user_output) as user_out, open(args.judge_output) as judge_out:
     if (args.verbose):
         print(res.to_string())
 
-    sys.exit(res.verdict.short_name != 'AC')
+    sys.exit(res.verdict.return_code)
 
