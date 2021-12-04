@@ -7,8 +7,6 @@ class Verdict:
 
 Correct = Verdict('AC', 'All Correct')
 WrongAnswer = Verdict('WA', 'Wrong Answer')
-TimeLimitExceeded = Verdict('TLE', 'Time Limit Exceeded')
-RunTimeError = Verdict('RTE', 'Run Time Error')
 PresentationError = Verdict('PE', 'PresentationError')
 
 class Response:
