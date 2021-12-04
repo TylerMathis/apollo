@@ -10,6 +10,8 @@ with open(args.user_output) as user_out, open(args.judge_output) as judge_out:
     else:
         res = diff_checker.check(user_out, judge_out)
 
-    print(res.to_string())
+    if (args.verbose):
+        print(res.to_string())
+
     sys.exit(res.verdict.short_name != 'AC')
 
