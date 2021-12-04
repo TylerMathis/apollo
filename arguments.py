@@ -2,11 +2,20 @@ import argparse, sys
 from os.path import exists
 
 def parse():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="""
+        Single test case checker for competitive programming.
+        Defaults to diff checker, but token and epsilon checkers are available.
+    """)
 
     parser.add_argument('input', help='input file')
     parser.add_argument('user_output', help='user output file')
     parser.add_argument('judge_output', help='judge output file')
+
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('-t', '--tok',
+            help='use token checker', action='store_true')
+    group.add_argument('-e', '--eps', type=float,
+            help='use epsilon checker')
 
     args = parser.parse_args()
     _validate(args)
