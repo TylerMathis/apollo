@@ -16,7 +16,7 @@ def check(user_out, judge_out):
     if (user_token_count < judge_token_count):
         return Response(WrongAnswer, 'Not enough output')
 
-    # Check input line by line
+    # Check input token by token
     for user, judge, tok in zip(user_tokens, judge_tokens, range(min_tokens)):
         if user != judge:
             return Response(WrongAnswer, (
