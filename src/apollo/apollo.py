@@ -1,4 +1,8 @@
-import arguments, diff_checker, token_checker, epsilon_checker, sys
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).parent.absolute()))
+import arguments, diff_checker, token_checker, epsilon_checker
 
 args = arguments.parse()
 
