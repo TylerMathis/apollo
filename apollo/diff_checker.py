@@ -1,4 +1,4 @@
-from verdict import Response, Correct, WrongAnswer, PresentationError
+from .verdict import Response, Correct, WrongAnswer, PresentationError
 
 # File references to user_out and judge_out
 def check(user_out, judge_out):

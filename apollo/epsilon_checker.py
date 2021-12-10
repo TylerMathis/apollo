@@ -1,4 +1,4 @@
-from verdict import Response, Correct, WrongAnswer, PresentationError
+from .verdict import Response, Correct, WrongAnswer, PresentationError
 
 def compare_eps(user, judge, eps):
     try:
