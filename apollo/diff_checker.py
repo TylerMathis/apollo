@@ -7,7 +7,7 @@ def check(user_out, judge_out):
 
     while (len(user_lines) > 0 and user_lines[-1] == ''):
         user_lines.pop()
-    while (len(user_lines) > 0 and judge_lines[-1] == ''):
+    while (len(judge_lines) > 0 and judge_lines[-1] == ''):
         judge_lines.pop()
 
     user_line_count = len(user_lines)
