@@ -5,9 +5,9 @@ def check(user_out, judge_out):
     user_lines = [s.strip() for s in user_out.readlines()]
     judge_lines = [s.strip() for s in judge_out.readlines()]
 
-    while (user_lines[-1] == ''):
+    while (len(user_lines) > 0 and user_lines[-1] == ''):
         user_lines.pop()
-    while (judge_lines[-1] == ''):
+    while (len(user_lines) > 0 and judge_lines[-1] == ''):
         judge_lines.pop()
 
     user_line_count = len(user_lines)
