@@ -21,4 +21,4 @@ def check(input, user_output, judge_output, tokenizer = False, epsilon = None):
         else:
             res = diff_checker.check(user_out, judge_out)
 
-    return res.to_string()
+    return res.to_JSON()

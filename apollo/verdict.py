@@ -18,3 +18,8 @@ class Response:
         if self.message != '':
             ret = ret + '\n' + self.message
         return ret
+    def to_JSON(self):
+        return {
+            self.verdict,
+            self.message
+        }
