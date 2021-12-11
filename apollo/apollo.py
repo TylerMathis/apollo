@@ -1,4 +1,3 @@
-import sys
 from . import arguments, diff_checker, token_checker, epsilon_checker
 
 def _cli():
@@ -11,10 +10,7 @@ def _cli():
         else:
             res = diff_checker.check(user_out, judge_out)
 
-        if (args.verbose):
-            print(res.to_string())
-
-        sys.exit(res.verdict.return_code)
+        print(res.to_string())
 
 def check(input, user_output, judge_output, tokenizer = False, epsilon = None):
     with open(user_output) as user_out, open(judge_output) as judge_out:
