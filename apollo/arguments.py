@@ -11,6 +11,9 @@ def parse():
     parser.add_argument('user_output', help='user output file')
     parser.add_argument('judge_output', help='judge output file')
 
+    parser.add_argument('-v', '--verbose',
+            help='Print result to stdout', action='store_true')
+
     group = parser.add_mutually_exclusive_group()
     group.add_argument('-t', '--tok',
             help='use token checker', action='store_true')

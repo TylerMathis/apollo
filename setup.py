@@ -9,7 +9,7 @@ setup(
     entry_points = {
         'console_scripts': ['apollo = apollo.apollo:_cli']
     },
-    version = '0.0.5',
+    version = '0.0.7',
     description = 'Apollo checker. The most feared of all the gods',
     long_description = long_descr,
     author = 'Tyler Hostler-Mathis',

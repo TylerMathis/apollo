@@ -8,8 +8,7 @@ Checker complete with diff, token, and epsilon checking.
 
 # Usage
 
-```
-usage: apollo [-h] [-t | -e EPS] input user_output judge_output
+usage: `apollo [-h] [-t | -e EPS] input user_output judge_output`
 
 positional arguments:
   input              input file
@@ -20,4 +19,3 @@ optional arguments:
   -h, --help         show this help message and exit
   -t, --tok          use token checker
   -e EPS, --eps EPS  use epsilon checker
-  ```
