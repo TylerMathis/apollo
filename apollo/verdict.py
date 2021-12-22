@@ -7,9 +7,8 @@ class Verdict:
         return self.short_name + ': ' + self.name
 
 Correct = Verdict('AC', 'All Correct', 0)
-# 1 and 2 reserved
-WrongAnswer = Verdict('WA', 'Wrong Answer', 3)
-PresentationError = Verdict('PE', 'Presentation Error', 4)
+WrongAnswer = Verdict('WA', 'Wrong Answer', 1)
+PresentationError = Verdict('PE', 'Presentation Error', 2)
 
 class Response:
     def __init__(self, verdict, message=''):
