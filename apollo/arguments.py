@@ -15,7 +15,7 @@ def parse():
             help='print result to stdout', action='store_true')
 
     parser.add_argument('-c', '--checker', type=str,
-            help='use custom checker with same input form')
+            help='path to optional custom checker with same input form')
 
     group = parser.add_mutually_exclusive_group()
     group.add_argument('-t', '--tok',
